@@ -22,6 +22,7 @@
 
         base {
             display-name = "BASE";
+            label = "BASE";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
             &lt BLUE ESC   &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSPC
@@ -37,6 +38,7 @@
 
         char {
             display-name = "CHAR";
+            label = "CHAR";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
             &kp LC(BSLH)   &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS      &kp ASTRK     &kp MINUS     &kp PLUS      &kp DEL
@@ -52,6 +54,7 @@
 
         navi_num {
             display-name = "NAVI NUM";
+            label = "NAVI NUM";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
             &none         &kp PG_UP     &kp HOME      &kp END       &none         &none             &kp PLUS      &kp N7        &kp N8        &kp N9        &kp DEL       &kp BSPC
