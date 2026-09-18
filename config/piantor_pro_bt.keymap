@@ -29,22 +29,6 @@
 };
 
 / {
-    behaviors {
-        // Home row mod: tap for the key, hold for the modifier.
-        hm: home_row_mod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-};
-
-/ {
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -55,7 +39,7 @@
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
             &lt BLUE ESC   &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSPC
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &lt NAVI TAB   &hm LSHFT A   &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L         &hm RSHFT SEMI &kp ENTER
+            &kp TAB       &lt NAVI A     &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L         &kp SEMI       &kp ENTER
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             &kp LSHFT      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp RSHFT
         // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
@@ -85,11 +69,11 @@
             label = "NAVI NUM";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-            &none         &kp PG_UP     &kp HOME      &kp END       &none         &none             &kp PLUS      &kp N7        &kp N8        &kp N9        &kp DEL       &kp BSPC
+            &none         &none         &kp PG_UP     &kp UP        &kp PG_DN     &kp HOME           &kp PLUS      &kp N7        &kp N8        &kp N9        &kp DEL       &kp BSPC
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &none         &kp LEFT      &kp UP        &kp PG_DN     &none         &none             &kp EQUAL     &kp N4        &kp N5        &kp N6        &kp ASTRK     &kp ENTER
+            &none         &none         &kp LEFT      &kp DOWN      &kp RIGHT      &kp END            &kp EQUAL     &kp N4        &kp N5        &kp N6        &kp ASTRK     &kp ENTER
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &kp LSHFT     &none         &kp DOWN      &kp RIGHT     &none         &none             &kp MINUS     &kp N1        &kp N2        &kp N3        &kp FSLH      &kp RSHFT
+            &none         &none         &none         &none         &none         &none             &kp MINUS     &kp N1        &kp N2        &kp N3        &kp FSLH      &kp RSHFT
         // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE        &none         &kp N0        &kp DOT
         //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
